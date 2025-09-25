@@ -1,1 +1,30 @@
+package studentTask;
+
+public class studentTask {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String Studentname="Suresh";
+		int Age=18;
+		byte StudentId=56;
+		short Rollno=2156;
+		float Height=67.0f;
+		double Weight=56f;
+		String Class="12th";
+		char Section='A';
+		long StudentMobileno=9878990876l;
+		boolean student=true;
+		System.out.println("Studentname:"+Studentname);
+		System.out.println("Age:"+Age);
+		System.out.println("StudentId:"+StudentId);
+		System.out.println("Rollno:"+Rollno);
+		System.out.println("Height:"+Height);		
+System.out.println("Weight:"+Weight);
+System.out.println("Class:"+Class);
+System.out.println("Section:"+Section);
+System.out.println("StudentMobileno:"+StudentMobileno);
+System.out.println("He is our student:"+student);	
+}
+
+}
 
