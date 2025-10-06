@@ -1,0 +1,39 @@
+package TaskSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class TaskSet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<String>Players=new LinkedHashSet<String>();
+		Set<String> clubs=new LinkedHashSet<String>();
+   Players.add("Ronaldo");
+   Players.add("Messi");
+   Players.add("Neymar");
+   clubs.add("Real madrid");
+   clubs.add("FC barcelona");
+   clubs.add("Paris saint germain");
+   Players.addAll(clubs);
+	System.out.println("Player name and their club");
+	for(String output:Players) {
+		System.out.println(output);
+	}
+		// searching an item
+		String searchPlayer="Mbappe";
+		boolean isExist=Players.contains(searchPlayer);
+		if(isExist) {
+			System.out.println(searchPlayer+"is available in players set");
+			
+		}
+		else {
+			System.out.println(searchPlayer+"is not in the players set");
+			Players.add(searchPlayer);
+			System.out.println("After adding ,players set:"+Players);
+		
+			
+		}
+	}
+	}
+
+
