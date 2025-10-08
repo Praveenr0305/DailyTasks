@@ -1,4 +1,4 @@
-package seleniumtask;
+package selenium;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class WebsiteTask {
+public class Taskselenium {
 
 	public static void main(String[] args) {
 		List<String> web = new ArrayList<String>();
