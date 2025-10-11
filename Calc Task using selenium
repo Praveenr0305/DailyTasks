@@ -1,0 +1,29 @@
+package seleniumpgm;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class calc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://testsheepnz.github.io/BasicCalculator.html");
+		WebElement firstnumber=driver.findElement(By.id("number1Field"));
+firstnumber.sendKeys("56");
+        WebElement secondnumber=driver.findElement(By.id("number2Field"));
+        secondnumber.sendKeys("78");
+        WebElement answer=driver.findElement(By.id("numberAnswerField"));
+        answer.sendKeys("134");
+        
+        WebElement aLink=driver.findElement(By.linkText("NUMBER GAME"));
+        String link=aLink.getText();
+        System.out.println("Link name:+alink");
+       
+        driver.close();
+	}
+
+}
