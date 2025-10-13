@@ -1,0 +1,25 @@
+package seleniumpgm;
+
+import java.util.List;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+
+public class Academybugstask {
+
+	public static void main(String[] args) {
+		
+		WebDriver chrome = new ChromeDriver();
+		//Open the website
+		chrome.get("https://academybugs.com/contact-us-form/");
+		//Print in the output
+        System.out.println("The website links are: ");
+		List<WebElement>links = chrome.findElements(By.xpath("//li"));
+		for(WebElement linkname:links) {
+			System.out.println(linkname.getText());
+		}
+		chrome.close();
+	}
+
+}
