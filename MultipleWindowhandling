@@ -1,0 +1,32 @@
+package Windowshandling;
+import java.util.Set;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+
+
+public class Taskmultiplewindow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver browser =new ChromeDriver();
+		//to open the web
+		browser.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+		String parentwindow=browser.getWindowHandle();
+        System.out.println("Parent window:"+parentwindow);
+        System.out.println("URL of Parent window:"+browser.getCurrentUrl());
+        browser.findElement(By.id("newWindowBtn")).click();
+        Set<String>handles=browser.getWindowHandles();
+        for(String childHandle:handles) {
+        	if(!childHandle.equals(parentwindow)) {
+        		browser.switchTo().window(childHandle);
+        		System.out.println("Child window:"+childHandle);
+        		System.out.println("URL of Child window:"+browser.getCurrentUrl());
+        	}
+        }
+        
+	}
+
+}
